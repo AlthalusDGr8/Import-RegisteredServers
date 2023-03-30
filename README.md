@@ -1,3 +1,5 @@
+Updated to work with the newer versions of the Azure Dat Studio
+
 # Import-RegisteredServers
 
 Did you want to copy all your currently registered servers in SQL Server Management Studio over to Azure Data Studio? Me too. This function will do just that.
