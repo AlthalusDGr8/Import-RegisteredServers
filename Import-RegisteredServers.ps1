@@ -12,7 +12,7 @@ begin {
     #Requires -module sqlserver    
     if (!$PathToSettingsFile) {
         Write-Verbose "No path specified, defaulting to current APPDATA environment variable..."
-        $PathToSettingsFile = ($env:APPDATA + "\sqlops\user\settings.json") 
+        $PathToSettingsFile = ($env:APPDATA + "\azuredatastudio\user\settings.json") 
         Write-Verbose "Backing up existing settings file..."
         Copy-Item -Path $PathToSettingsFile -Destination ($PathToSettingsFile + ".old")
         Write-Verbose "Path to settings = $PathToSettingsFile"
@@ -91,6 +91,7 @@ process {
                     password=$dbPassword
                     applicationName="sqlops"
                     databaseDisplayName="master"
+                    trustServerCertificate = $true
                 }
                 groupId = $ParentID.id
                 providerName = "MSSQL"
