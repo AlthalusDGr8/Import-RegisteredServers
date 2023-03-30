@@ -1,4 +1,4 @@
-Updated to work with the newer versions of the Azure Dat Studio
+Updated to work with the newer versions of the Azure Data Studio
 
 # Import-RegisteredServers
 
